@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ninja vs Samurai Mega Blaster Battle Royale: 1 de vida, ninjas contra samurais, multiplayer. Um jogo da Bananie.">
+<title>Ninja vs Samurai Mega Blaster Battle Royale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 16mm 16mm 18mm 16mm; }
+  :root { --ink:#3A2A1F; --soft:#6b5a4d; --cream:#FFF6E3; --sun:#FFD23F; --coral:#FF5A4E; --leaf:#6CC25B; --sky:#7FD3FF; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.45; margin: 0; }
+  h1, h2, h3, .display { font-family: "Lilita One", "Segoe UI", sans-serif; font-weight: normal; letter-spacing: .3px; }
+  h2 { font-size: 22pt; color: var(--coral); margin: 0 0 6px; -webkit-text-stroke: .6px var(--ink); }
+  h3 { font-size: 13.5pt; margin: 14px 0 4px; }
+  p { margin: 4px 0 8px; }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+
+  /* Capa */
+  .cover { height: 260mm; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+           background: linear-gradient(#bfe9ff, #fff6e3 70%); border: 3px solid var(--ink); border-radius: 18px; padding: 20px; }
+  .t-top { font-size: 26pt; color: var(--sun); -webkit-text-stroke: 1.2px var(--ink); transform: rotate(-3deg); margin-bottom: -6px; }
+  .t-main { font-size: 70pt; color: #fff; -webkit-text-stroke: 2px var(--ink); transform: rotate(-2deg); line-height: 1; }
+  .t-sticker { display: inline-block; font-size: 18pt; color: #fff; background: var(--coral); border: 3px solid var(--ink); border-radius: 10px;
+               padding: 2px 16px; transform: rotate(3deg); margin-top: 6px; }
+  .tagline { font-size: 14pt; margin: 22px 0 6px; font-weight: 600; }
+  .guide { font-size: 30pt; margin: 18px 0 6px; }
+  .mp-badge { margin-top: 26px; background: var(--leaf); color: #fff; border: 3px solid var(--ink); border-radius: 14px; padding: 10px 22px;
+              font-family: "Lilita One", sans-serif; font-size: 17pt; transform: rotate(-1.5deg); }
+  .studio { margin-top: auto; display: flex; flex-direction: column; align-items: center; }
+  .studio .name { font-size: 22pt; color: var(--sun); -webkit-text-stroke: 1px var(--ink); }
+  .studio small { color: var(--soft); }
+
+  /* Blocos */
+  .callout { background: var(--cream); border: 2.5px solid var(--ink); border-radius: 14px; padding: 10px 14px; margin: 10px 0; }
+  .callout.sun { background: #fff1b8; }
+  .callout.leaf { background: #e3f6dc; }
+  .callout.big { font-size: 12pt; }
+  .callout .display { font-size: 15pt; }
+  .cols { display: flex; gap: 12px; }
+  .cols > * { flex: 1; }
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 10px; font-size: 10pt; }
+  th { font-family: "Lilita One", sans-serif; font-weight: normal; text-align: left; background: var(--sun); border: 2px solid var(--ink); padding: 5px 8px; font-size: 11pt; }
+  td { border: 1.5px solid #cbb9a6; padding: 5px 8px; vertical-align: top; }
+  tr:nth-child(even) td { background: #fffaf0; }
+  kbd { font-family: "Segoe UI", sans-serif; font-weight: 700; font-size: 9pt; background: #fff; border: 1.5px solid var(--ink); border-bottom-width: 3px;
+        border-radius: 5px; padding: 0 5px; white-space: nowrap; }
+  .tag { display: inline-block; font-size: 8.5pt; font-weight: 700; border-radius: 6px; padding: 0 6px; border: 1.5px solid var(--ink); }
+  .tag.n { background: #2f3456; color: #fff; } .tag.s { background: var(--coral); color: #fff; } .tag.b { background: var(--leaf); color: #fff; }
+  ul { margin: 4px 0 8px 18px; padding: 0; } li { margin: 2px 0; }
+  /* Vídeo de demonstração */
+  .video-section { text-align: center; margin-bottom: 18px; }
+  .video-section h2 { margin-bottom: 10px; }
+  .video { position: relative; width: 100%; aspect-ratio: 16 / 9; border: 3px solid var(--ink); border-radius: 18px; overflow: hidden; background: #000; }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+  /* Na tela: coluna centralizada sobre fundo de céu. Na impressão: páginas A4. */
+  @media screen {
+    html { background: #bfe9ff; }
+    body { max-width: 880px; margin: 0 auto; padding: 24px 16px 40px; }
+    .page { background: #fff; border: 3px solid var(--ink); border-radius: 18px; padding: 22px 26px; margin-bottom: 22px; }
+    .page.cover { height: auto; min-height: 640px; padding: 30px 20px; }
+    .video-section { background: transparent; border: 0; padding: 0; }
+    .cols { flex-wrap: wrap; }
+    .cols > * { min-width: 240px; }
+  }
+  @media screen and (max-width: 600px) {
+    .t-main { font-size: 46pt; } .t-top { font-size: 17pt; } .guide { font-size: 22pt; }
+    .page { padding: 16px; } table { font-size: 9pt; }
+  }
+  @media print { .video-section { display: none; } }
+
+  .footer-note { text-align: center; color: var(--soft); font-size: 9pt; margin-top: 18px; }
+</style>
+</head>
+<body>
+
+<!-- ================= VÍDEO ================= -->
+<section class="page video-section">
+  <h2>Veja o jogo em ação</h2>
+  <div class="video">
+    <iframe src="https://www.youtube-nocookie.com/embed/JsIXdZwo3vA" title="Demonstração de Ninja vs Samurai Mega Blaster Battle Royale"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- ================= CAPA ================= -->
+<section class="page cover">
+  <div class="display t-top">NINJA VS SAMURAI MEGA</div>
+  <div class="display t-main">BLASTER</div>
+  <div class="display t-sticker">BATTLE ROYALE</div>
+  <div class="tagline">Um golpe. Uma vida. Zero piedade.</div>
+  <div class="display guide">Guia de Como Jogar</div>
+  <div class="mp-badge">Multiplayer: chame a galera! Quanto mais gente, melhor.</div>
+  <div class="studio">
+    <svg width="120" height="120" viewBox="0 0 100 100" stroke="#3A2A1F" stroke-linejoin="round" stroke-linecap="round">
+      <polygon points="43,84 50,99 57,84" fill="#F5B024" stroke-width="4"/>
+      <path d="M40 24 Q32 16 31 4 Q41 10 47 21 Z" fill="#F5B024" stroke-width="4"/>
+      <path d="M45 21 Q44 8 50 1 Q56 10 54 21 Z" fill="#F5B024" stroke-width="4"/>
+      <path d="M52 22 Q60 9 69 6 Q66 18 58 25 Z" fill="#F5B024" stroke-width="4"/>
+      <ellipse cx="50" cy="71" rx="27" ry="23" fill="#FFD945" stroke-width="5"/>
+      <path d="M30 57 C15 63 15 84 31 90 C28 80 33 66 30 57 Z" fill="#F5B024" stroke-width="4"/>
+      <path d="M70 57 C85 63 85 84 69 90 C72 80 67 66 70 57 Z" fill="#F5B024" stroke-width="4"/>
+      <ellipse cx="50" cy="77" rx="14" ry="12" fill="#FFF0A8" stroke="none"/>
+      <line x1="42" y1="93" x2="42" y2="98" stroke-width="5"/><line x1="58" y1="93" x2="58" y2="98" stroke-width="5"/>
+      <circle cx="50" cy="39" r="23" fill="#FFD945" stroke-width="5"/>
+      <circle cx="33" cy="47" r="6.5" fill="#FF844A" stroke="none"/><circle cx="67" cy="47" r="6.5" fill="#FF844A" stroke="none"/>
+      <circle cx="40" cy="37" r="5" fill="#3A2A1F" stroke="none"/><circle cx="60" cy="37" r="5" fill="#3A2A1F" stroke="none"/>
+      <circle cx="41.8" cy="35" r="1.9" fill="#fff" stroke="none"/><circle cx="61.8" cy="35" r="1.9" fill="#fff" stroke="none"/>
+      <polygon points="45.5,43 54.5,43 50,51" fill="#DBBDAD" stroke-width="3"/>
+    </svg>
+    <div class="display name">Bananie</div>
+    <small>Um jogo da Bananie · Jean de Azevedo Pereira</small>
+  </div>
+</section>
+
+<!-- ================= REGRA DE OURO + MULTIPLAYER ================= -->
+<section class="page">
+  <h2>A regra de ouro: todo mundo tem 1 de vida</h2>
+  <p>Inspirado no clássico mapa customizado <b>"Ninja vs Samurai"</b>, aqui <b>qualquer golpe mata</b>: um corte, uma shuriken, uma estocada.
+  Ninguém ganha trocando dano. Ganha quem se posiciona melhor, se esconde, lê o adversário e ataca na hora certa.</p>
+  <div class="callout sun big"><span class="display">Pense antes de correr.</span> Na maioria das vezes, quem aparece primeiro é quem morre primeiro.</div>
+
+  <h2 style="margin-top:18px">Este jogo é feito para jogar junto</h2>
+  <p><b>Ninja vs Samurai Mega Blaster é um jogo multiplayer.</b> Dá para treinar sozinho, mas a graça de verdade aparece quando a sala enche.
+  <b>Quanto mais pessoas entram, mais engraçado e mais competitivo fica:</b></p>
+  <ul>
+    <li><b>Mais caos, mais risada:</b> emboscadas em arbustos, clones enganando todo mundo, três pessoas morrendo no mesmo segundo, alguém disfarçado de pedra no meio da vila…</li>
+    <li><b>Mais estratégia:</b> com times cheios, os ninjas podem se dividir e atacar vários talismãs ao mesmo tempo, e os samurais precisam se organizar para proteger tudo.</li>
+    <li><b>Mais tensão:</b> com 1 de vida, cada jogador a mais é mais uma ameaça escondida na névoa.</li>
+    <li><b>Mais revanche:</b> partidas curtas, e "jogar de novo" sai com um clique.</li>
+  </ul>
+
+  <h3>Três jeitos de juntar a galera</h3>
+  <table>
+    <tr><th style="width:24%">Como</th><th>O que fazer</th></tr>
+    <tr><td><b>No mesmo sofá</b><br>(Jogar Local)</td><td>Um jogador no teclado e mouse, e <b>até 4 controles</b>: cada controle entra apertando <kbd>A</kbd> ou <kbd>Start</kbd>. Todos dividem a mesma tela, e a câmera se afasta para enquadrar todo mundo.</td></tr>
+    <tr><td><b>Na mesma rede</b><br>(LAN)</td><td>Um jogador escolhe <b>Hospedar Partida</b>; os outros vão em <b>Entrar em Partida</b> e escolhem a sala na lista (ou digitam o endereço).</td></tr>
+    <tr><td><b>Pela internet</b><br>(Steam)</td><td>Hospede uma sala, convide seus amigos da Steam pelo lobby ou procure salas abertas. Cabem <b>até 16 jogadores</b> por partida.</td></tr>
+  </table>
+  <div class="callout leaf"><span class="display">Ponto ideal: 5 contra 5.</span> O modo clássico foi pensado para times cheios. Mas qualquer número a partir de 2 jogadores já funciona.</div>
+</section>
+
+<!-- ================= CONTROLES ================= -->
+<section class="page">
+  <h2>Controles</h2>
+  <table>
+    <tr><th style="width:34%">Ação</th><th>Teclado e mouse</th><th>Controle</th></tr>
+    <tr><td>Andar</td><td><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> ou setas</td><td>Analógico esquerdo / direcional</td></tr>
+    <tr><td>Mirar</td><td>Mouse</td><td>Analógico direito</td></tr>
+    <tr><td>Golpe de espada</td><td>Botão esquerdo ou <kbd>J</kbd></td><td><kbd>RT</kbd> ou <kbd>X</kbd></td></tr>
+    <tr><td>Shuriken</td><td>Botão direito ou <kbd>K</kbd></td><td><kbd>RB</kbd> ou <kbd>Y</kbd></td></tr>
+    <tr><td>Dash (esquiva)</td><td><kbd>Espaço</kbd> ou <kbd>Shift</kbd></td><td><kbd>A</kbd> ou <kbd>LB</kbd></td></tr>
+    <tr><td>Habilidade da classe</td><td><kbd>Q</kbd> ou <kbd>L</kbd></td><td><kbd>LT</kbd></td></tr>
+    <tr><td>Habilidade extra</td><td><kbd>E</kbd> ou <kbd>;</kbd></td><td><kbd>B</kbd></td></tr>
+    <tr><td>Pausar</td><td><kbd>Esc</kbd></td><td><kbd>Start</kbd></td></tr>
+    <tr><td>Trocar quem assistir (morto)</td><td><kbd>A</kbd> / <kbd>D</kbd> ou setas</td><td>Direcional ou <kbd>LB</kbd> / <kbd>RB</kbd></td></tr>
+  </table>
+
+  <h3>O kit básico de todo mundo</h3>
+  <ul>
+    <li><b>Golpe:</b> um corte em arco na frente, muito rápido. Não atravessa paredes.</li>
+    <li><b>Shuriken:</b> 3 cargas, recarrega uma a cada ~2 s. Mata com um acerto e fica cravada em paredes e caixas.</li>
+    <li><b>Dash:</b> um pulo curto em que <b>você não pode ser atingido</b>. Use para desviar de shurikens e golpes.</li>
+  </ul>
+  <div class="callout sun"><span class="display">Ataque pelas costas!</span> Um golpe por trás alcança um pouco mais longe e atravessa até a guarda do samurai. Quem fica de costas para o inimigo não dura muito.</div>
+
+  <h3>Morreu? Não acabou</h3>
+  <p>Dependendo do modo, você volta depois de alguns segundos, e com uma breve proteção piscando. Enquanto espera, a câmera acompanha um aliado vivo.
+  Aproveite para trocar a habilidade extra: entre uma vida e outra, aperte o botão da habilidade extra para escolher a próxima.</p>
+</section>
+
+<!-- ================= CLASSES E HABILIDADES ================= -->
+<section class="page">
+  <h2>Ninjas e Samurais</h2>
+  <div class="cols">
+    <div class="callout"><span class="display">Ninja</span><br>Furtivo e esperto. <b>Some dentro de arbustos e fumaça.</b><br>
+      Habilidade de classe: <b>Disfarce</b>, que vira o objeto mais próximo no chão (uma pedra, uma caixa…). Andar ou fazer qualquer ação desfaz o disfarce.</div>
+    <div class="callout"><span class="display">Samurai</span><br>Forte e direto. Não se esconde em arbustos, mas <b>o golpe alcança mais longe e rebate shurikens</b>.<br>
+      Habilidade de classe: <b>Estocada</b>, que avança 6 m com a lança e mata todo inimigo no caminho.</div>
+  </div>
+
+  <h3>Habilidades extras (escolha 1 por vida)</h3>
+  <table>
+    <tr><th style="width:24%">Habilidade</th><th style="width:13%">Quem usa</th><th>O que faz</th></tr>
+    <tr><td>Bomba de Fumaça</td><td><span class="tag n">Ninja</span></td><td>Nuvem de fumaça que funciona como um arbusto por 5 s.</td></tr>
+    <tr><td>Clone</td><td><span class="tag n">Ninja</span></td><td>Uma cópia sua sai correndo na direção da mira por 2 s. Ótima para enganar.</td></tr>
+    <tr><td>Metsubushi</td><td><span class="tag n">Ninja</span></td><td>Pó cegante em cone: os inimigos atingidos enxergam só 30% por 3,5 s.</td></tr>
+    <tr><td>Passos silenciosos</td><td><span class="tag n">Ninja</span></td><td>Passiva: andar dentro de arbustos não balança as folhas.</td></tr>
+    <tr><td>Kiai</td><td><span class="tag s">Samurai</span></td><td>Grito e giro de lança em volta de si: mata quem estiver a até 2,8 m.</td></tr>
+    <tr><td>Naruko</td><td><span class="tag s">Samurai</span></td><td>Corda de sinos: o primeiro inimigo que cruzar toca o alarme e fica visível para o seu time por 4 s.</td></tr>
+    <tr><td>Kamae</td><td><span class="tag s">Samurai</span></td><td>Guarda rápida que bloqueia tudo que vem pela frente. Pelas costas, ainda morre.</td></tr>
+    <tr><td>Taiko</td><td><span class="tag s">Samurai</span></td><td>Tambor de guerra: você e os aliados próximos ficam 35% mais rápidos por 4 s.</td></tr>
+    <tr><td>Aljava</td><td><span class="tag b">Ambos</span></td><td>Passiva: +1 shuriken e recarga mais rápida.</td></tr>
+    <tr><td>Muro de bambu</td><td><span class="tag b">Ambos</span></td><td>Ergue um muro por 5 s que bloqueia passagem, shurikens e golpes (mas não a visão).</td></tr>
+    <tr><td>Pés ligeiros</td><td><span class="tag b">Ambos</span></td><td>Passiva: o dash recarrega 40% mais rápido.</td></tr>
+  </table>
+  <p>Algumas habilidades combinam muito bem em equipe: um Taiko na hora certa, um Naruko cobrindo a passagem de um aliado, uma Fumaça para o time inteiro fugir. <b>Mais jogadores, mais combos.</b></p>
+</section>
+
+<!-- ================= MODOS ================= -->
+<section class="page">
+  <h2>Modos de jogo</h2>
+
+  <h3>Ninjas vs Samurais (clássico)</h3>
+  <p>Os <b>ninjas</b> invadem e roubam <b>talismãs</b> espalhados pelo mapa, um de cada vez, e levam até a base ninja. Os <b>samurais</b> defendem.</p>
+  <ul>
+    <li>Os ninjas dividem um estoque de <b>vidas</b> (10 por padrão). Quando acaba, quem morrer fica fora.</li>
+    <li>Quem carrega o talismã anda mais devagar e brilha de tempos em tempos, então os samurais podem achá-lo.</li>
+    <li>Talismã caído: um samurai que encosta nele o devolve ao santuário; um ninja que encosta pega de volta.</li>
+    <li><b>Ninjas vencem</b> entregando a meta de talismãs (5 de 7 por padrão). <b>Samurais vencem</b> acabando com as vidas dos ninjas.</li>
+  </ul>
+
+  <h3>Rodadas por Equipe</h3>
+  <p>Ninguém renasce durante a rodada. Elimine o time inimigo inteiro para marcar um ponto. Quem chegar primeiro na meta (5 pontos por padrão) é campeão.</p>
+
+  <h3>Roubo de Estandarte (captura da bandeira)</h3>
+  <p>Dois clãs, o <b>Clã do Dragão</b> e o <b>Clã da Fênix</b>, cada um com ninjas e samurais misturados. Roube o estandarte inimigo e leve até o seu pedestal
+  <b>enquanto o seu está seguro em casa</b>. O portador anda mais devagar e um sino o denuncia de tempos em tempos. Vence quem fizer 3 capturas, ou quem estiver na frente quando os 10 minutos acabarem
+  (empate vai para a morte súbita).</p>
+
+  <h3>Battle Royale</h3>
+  <p>Cada um por si. Escolha ninja ou samurai, sem renascer e sem visão compartilhada. Uma <b>zona</b> vai se fechando: ficar 3 segundos fora dela é morte. <b>O último de pé vence.</b></p>
+  <div class="callout leaf"><span class="display">Battle Royale com a sala cheia é outra coisa.</span> Com 2 pessoas é um duelo; com 10 ou mais, é uma bagunça deliciosa de emboscadas, traições e fugas desesperadas da zona.</div>
+</section>
+
+<!-- ================= MAPAS + DICAS ================= -->
+<section class="page">
+  <h2>Mapas</h2>
+  <table>
+    <tr><th style="width:26%">Mapa</th><th>Como é</th><th style="width:28%">Modos</th></tr>
+    <tr><td>Vila da Floresta</td><td>Uma vila murada no meio de uma floresta fechada, com trilhas e clareiras.</td><td>Clássico, Rodadas</td></tr>
+    <tr><td>Clareira de Outono</td><td>Clareira central cercada de trilhas em anel, lama e atalhos estreitos.</td><td>Clássico, Rodadas</td></tr>
+    <tr><td>Mata Fechada de Outono</td><td>Grande, claustrofóbico: um labirinto de trilhas estreitas e esconderijos.</td><td>Clássico, Rodadas, Battle Royale</td></tr>
+    <tr><td>Vilas Rivais</td><td>Duas vilas frente a frente, com três caminhos entre elas.</td><td>Roubo de Estandarte, Rodadas</td></tr>
+    <tr><td>Penhascos do Duelo</td><td>Mapa com relevo: arena no fosso, torres de vigia, platôs e rampas.</td><td>Clássico, Rodadas, Battle Royale</td></tr>
+  </table>
+
+  <h2 style="margin-top:14px">Dicas para sobreviver</h2>
+  <ul>
+    <li><b>A névoa é sua amiga (e sua inimiga).</b> Você só vê o que está perto e o que seu time vê. Paredes e árvores bloqueiam a visão.</li>
+    <li><b>Arbustos escondem ninjas</b>, mas balançam quando alguém entra, sai ou anda dentro. Fique de olho nas folhas.</li>
+    <li><b>Atacar revela</b> um ninja escondido por um instante. Escolha bem a hora.</li>
+    <li><b>Terreno alto esconde</b> quem está em cima de quem está embaixo. Mas os ataques passam: dá para acertar de baixo para cima.</li>
+    <li><b>Lama deixa você lento</b>, inclusive no dash. Evite lutar dentro dela.</li>
+    <li><b>Samurai: rebata shurikens</b> com o golpe e devolva para quem jogou.</li>
+    <li><b>Ninja: não lute de frente.</b> Disfarce-se, espere, e ataque pelas costas.</li>
+  </ul>
+
+  <div class="callout sun big" style="margin-top:16px; text-align:center">
+    <span class="display" style="font-size:20pt">Agora chame os amigos!</span><br>
+    Hospede uma partida, mande o convite e encha a sala. Quanto mais gente, mais engraçado e mais competitivo fica.
+  </div>
+  <div class="footer-note">Ninja vs Samurai Mega Blaster Battle Royale · © 2026 Bananie</div>
+</section>
+
+</body>
+</html>
