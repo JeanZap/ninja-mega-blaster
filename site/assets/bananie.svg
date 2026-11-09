@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" stroke="#3A2A1F" stroke-linejoin="round" stroke-linecap="round">
+  <polygon points="43,84 50,99 57,84" fill="#F5B024" stroke-width="4"/>
+  <path d="M40 24 Q32 16 31 4 Q41 10 47 21 Z" fill="#F5B024" stroke-width="4"/>
+  <path d="M45 21 Q44 8 50 1 Q56 10 54 21 Z" fill="#F5B024" stroke-width="4"/>
+  <path d="M52 22 Q60 9 69 6 Q66 18 58 25 Z" fill="#F5B024" stroke-width="4"/>
+  <ellipse cx="50" cy="71" rx="27" ry="23" fill="#FFD945" stroke-width="5"/>
+  <path d="M30 57 C15 63 15 84 31 90 C28 80 33 66 30 57 Z" fill="#F5B024" stroke-width="4"/>
+  <path d="M70 57 C85 63 85 84 69 90 C72 80 67 66 70 57 Z" fill="#F5B024" stroke-width="4"/>
+  <ellipse cx="50" cy="77" rx="14" ry="12" fill="#FFF0A8" stroke="none"/>
+  <line x1="42" y1="93" x2="42" y2="98" stroke-width="5"/><line x1="58" y1="93" x2="58" y2="98" stroke-width="5"/>
+  <circle cx="50" cy="39" r="23" fill="#FFD945" stroke-width="5"/>
+  <circle cx="33" cy="47" r="6.5" fill="#FF844A" stroke="none"/><circle cx="67" cy="47" r="6.5" fill="#FF844A" stroke="none"/>
+  <circle cx="40" cy="37" r="5" fill="#3A2A1F" stroke="none"/><circle cx="60" cy="37" r="5" fill="#3A2A1F" stroke="none"/>
+  <circle cx="41.8" cy="35" r="1.9" fill="#fff" stroke="none"/><circle cx="61.8" cy="35" r="1.9" fill="#fff" stroke="none"/>
+  <polygon points="45.5,43 54.5,43 50,51" fill="#DBBDAD" stroke-width="3"/>
+</svg>
