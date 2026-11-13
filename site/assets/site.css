@@ -1,6 +1,6 @@
-/* Ninja vs Samurai Mega Blaster — estilos compartilhados do site.
-   Cabeçalho e rodapé valem em todas as páginas (inclusive o guia Como Jogar).
-   O resto só vale em páginas com <body class="site">. */
+/* Ninja vs Samurai Mega Blaster — shared site styles.
+   The header and footer apply to every page (including the How to Play guide).
+   The rest applies only to pages with <body class="site">. */
 
 :root {
   --ink: #3A2A1F; --soft: #6b5a4d; --cream: #FFF6E3; --paper: #fffdf7;
@@ -11,7 +11,7 @@
   --radius: 18px;
 }
 
-/* ---------- Cabeçalho ---------- */
+/* ---------- Header ---------- */
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--sun); border-bottom: 3px solid var(--ink);
   font-family: var(--body); }
 .site-header .bar { max-width: 1140px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; gap: 16px; }
@@ -40,7 +40,7 @@
   .site-nav a:hover, .site-nav a[aria-current="page"] { transform: none; }
 }
 
-/* ---------- Rodapé ---------- */
+/* ---------- Footer ---------- */
 .site-footer { margin-top: auto; background: var(--ink); color: #f3e6d6; font-family: var(--body); font-size: 15px; }
 .site-footer .inner { max-width: 1140px; margin: 0 auto; padding: 34px 16px 26px; display: grid; gap: 24px;
   grid-template-columns: 1.4fr 1fr 1fr; }
@@ -56,7 +56,7 @@
 
 @media print { .site-header, .site-footer { display: none !important; } }
 
-/* =================== Páginas do site =================== */
+/* =================== Site pages =================== */
 body.site { min-height: 100vh; display: flex; flex-direction: column; margin: 0; font-family: var(--body); color: var(--ink); background: var(--sky-pale); font-size: 17px; line-height: 1.55; }
 body.site h1, body.site h2, body.site h3, body.site .display { font-family: var(--display); font-weight: normal; letter-spacing: .3px; line-height: 1.1; }
 body.site h2 { font-size: clamp(30px, 5vw, 44px); color: var(--coral); margin: 0 0 12px; -webkit-text-stroke: 1px var(--ink); paint-order: stroke fill; }
@@ -75,7 +75,7 @@ body.site *, body.site *::before, body.site *::after { box-sizing: border-box; }
 .section-head .kicker { display: inline-block; font-family: var(--display); font-size: 16px; background: var(--ink); color: var(--sun);
   padding: 3px 12px; border-radius: 8px; transform: rotate(-2deg); margin-bottom: 10px; }
 
-/* Botões em estilo adesivo */
+/* Sticker-style buttons */
 .btn { display: inline-block; font-family: var(--display); font-size: 21px; text-decoration: none; color: var(--ink);
   background: #fff; border: 3px solid var(--ink); border-radius: 14px; padding: 10px 22px; box-shadow: 0 5px 0 var(--ink);
   transition: transform .1s, box-shadow .1s; }
@@ -91,7 +91,7 @@ body.site a.btn.steam, a.btn.steam { color: #fff; }
 .btn.soon:hover, .btn.soon:active { transform: none; box-shadow: 0 5px 0 var(--ink); }
 .btn-row { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
-/* Cartões */
+/* Cards */
 .card { background: #fff; border: 3px solid var(--ink); border-radius: var(--radius); padding: 22px; box-shadow: 0 6px 0 rgba(58,42,31,.18); }
 .grid { display: grid; gap: 20px; }
 .grid.c2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
@@ -105,10 +105,10 @@ body.site a.btn.steam, a.btn.steam { color: #fff; }
 .tag.n { background: var(--night); color: #fff; } .tag.s { background: var(--coral); color: #fff; } .tag.b { background: var(--leaf); color: #fff; }
 .tag.y { background: var(--sun); }
 
-/* ---------- Herói (página inicial) ---------- */
+/* ---------- Hero (home page) ---------- */
 .hero { position: relative; overflow: hidden; background: linear-gradient(#7fd3ff, #bfe9ff 55%, #fff1c9 100%);
   border-bottom: 3px solid var(--ink); }
-/* Altura do cenário segue a proporção do desenho (1440x260): o topo nunca é cortado; em tela estreita só as laterais. */
+/* Scene height follows the artwork ratio (1440x260): the top is never cropped; only the sides are on narrow screens. */
 .hero { --scene-h: max(150px, calc(100vw * 260 / 1440)); }
 .hero .scene { position: absolute; inset: auto 0 0 0; width: 100%; height: var(--scene-h); }
 .hero .sunball { position: absolute; top: 34px; right: 9%; width: 100px; height: 100px; border-radius: 50%; background: var(--sun);
@@ -123,7 +123,7 @@ body.site a.btn.steam, a.btn.steam { color: #fff; }
 @keyframes drift { from { translate: -30px 0; } to { translate: 60px 0; } }
 @media (prefers-reduced-motion: reduce) { .cloud { animation: none !important; } }
 .hero .content { position: relative; z-index: 2; text-align: center; padding: 36px 16px calc(var(--scene-h) * .45); max-width: 1240px; margin: 0 auto; }
-/* Trailer dentro do herói: abaixo do logo no celular, ao lado dele em telas largas. */
+/* Trailer inside the hero: below the logo on mobile, beside it on wide screens. */
 .hero-video { max-width: 760px; margin: 30px auto 0; }
 @media (min-width: 1000px) {
   .hero-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 44px; align-items: center; }
@@ -159,7 +159,7 @@ body.site a.btn.steam, a.btn.steam { color: #fff; }
 .video .poster:hover .play { transform: scale(1.08) rotate(-4deg); }
 .play svg { width: 44px; height: 44px; margin-left: 6px; }
 
-/* Faixa de modos / mapas */
+/* Modes / maps section */
 .mode-card h3 { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .map-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
 .map-card .art { height: 150px; border-bottom: 3px solid var(--ink); position: relative; }
@@ -167,19 +167,19 @@ body.site a.btn.steam, a.btn.steam { color: #fff; }
 .map-card .body { padding: 16px 18px 18px; }
 .map-card .modes { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
 
-/* Destaque / CTA */
+/* Highlight / CTA */
 .cta-box { text-align: center; background: var(--sun); border: 4px solid var(--ink); border-radius: 26px; padding: 40px 22px;
   box-shadow: 0 10px 0 var(--ink); transform: rotate(-.6deg); }
 .cta-box h2 { color: #fff; }
 
-/* Cabeçalho de página interna */
+/* Inner page header */
 .page-hero { background: linear-gradient(#7fd3ff, #bfe9ff); border-bottom: 3px solid var(--ink); text-align: center; padding: 54px 16px 46px;
   position: relative; overflow: hidden; }
 .page-hero h1 { font-size: clamp(42px, 8vw, 76px); color: #fff; -webkit-text-stroke: 2.5px var(--ink); paint-order: stroke fill;
   text-shadow: 0 6px 0 var(--ink); margin: 0; transform: rotate(-1.5deg); }
 body.site .page-hero p { font-size: 20px; font-weight: 700; max-width: 640px; margin: 18px auto 0; }
 
-/* Novidades */
+/* News */
 .post { display: grid; grid-template-columns: 130px 1fr; gap: 22px; margin-bottom: 26px; }
 .post .date { font-family: var(--display); text-align: center; background: var(--sun); border: 3px solid var(--ink); border-radius: 16px;
   padding: 10px 6px; height: max-content; transform: rotate(-3deg); }
@@ -189,7 +189,7 @@ body.site .page-hero p { font-size: 20px; font-weight: 700; max-width: 640px; ma
 .post ul { margin: 6px 0 4px 20px; padding: 0; } .post li { margin: 4px 0; }
 @media (max-width: 640px) { .post { grid-template-columns: 1fr; } .post .date { width: 130px; } }
 
-/* Ficha técnica / tabelas */
+/* Technical sheet / tables */
 .facts { width: 100%; border-collapse: collapse; }
 .facts th, .facts td { text-align: left; padding: 9px 12px; border-bottom: 2px dashed #e1d3c2; vertical-align: top; }
 .facts th { font-family: var(--display); font-weight: normal; width: 36%; font-size: 18px; }

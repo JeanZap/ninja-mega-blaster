@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="description" content="Guia de Como Jogar Ninja vs Samurai Mega Blaster Battle Royale: controles, classes, habilidades, modos, mapas e dicas.">
-<title>Como Jogar · Ninja vs Samurai Mega Blaster</title>
+<meta name="description" content="Ninja vs Samurai Mega Blaster Battle Royale How to Play Guide: controls, classes, abilities, modes, maps, and tips.">
+<title>How to Play · Ninja vs Samurai Mega Blaster</title>
 <link rel="icon" href="assets/bananie.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
-<!-- site.css só traz o menu e o rodapé do site; o visual do guia continua todo aqui embaixo. -->
+<!-- site.css only provides the site's menu and footer; the guide's visuals continue below. -->
 <link rel="stylesheet" href="assets/site.css">
 <style>
   @page { size: A4; margin: 16mm 16mm 18mm 16mm; }
@@ -24,7 +24,7 @@
   .page { page-break-after: always; }
   .page:last-child { page-break-after: auto; }
 
-  /* Capa */
+  /* Cover */
   .cover { height: 260mm; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
            background: linear-gradient(#bfe9ff, #fff6e3 70%); border: 3px solid var(--ink); border-radius: 18px; padding: 20px; }
   .t-top { font-size: 26pt; color: var(--sun); -webkit-text-stroke: 1.2px var(--ink); transform: rotate(-3deg); margin-bottom: -6px; }
@@ -39,7 +39,7 @@
   .studio .name { font-size: 22pt; color: var(--sun); -webkit-text-stroke: 1px var(--ink); }
   .studio small { color: var(--soft); }
 
-  /* Blocos */
+  /* Blocks */
   .callout { background: var(--cream); border: 2.5px solid var(--ink); border-radius: 14px; padding: 10px 14px; margin: 10px 0; }
   .callout.sun { background: #fff1b8; }
   .callout.leaf { background: #e3f6dc; }
@@ -56,13 +56,13 @@
   .tag { display: inline-block; font-size: 8.5pt; font-weight: 700; border-radius: 6px; padding: 0 6px; border: 1.5px solid var(--ink); }
   .tag.n { background: #2f3456; color: #fff; } .tag.s { background: var(--coral); color: #fff; } .tag.b { background: var(--leaf); color: #fff; }
   ul { margin: 4px 0 8px 18px; padding: 0; } li { margin: 2px 0; }
-  /* Vídeo de demonstração */
+  /* Demonstration video */
   .video-section { text-align: center; margin-bottom: 18px; }
   .video-section h2 { margin-bottom: 10px; }
   .video { position: relative; width: 100%; aspect-ratio: 16 / 9; border: 3px solid var(--ink); border-radius: 18px; overflow: hidden; background: #000; }
   .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
-  /* Na tela: coluna centralizada sobre fundo de céu. Na impressão: páginas A4. */
+  /* On screen: centered column over a sky background. In print: A4 pages. */
   @media screen {
     html { background: #bfe9ff; }
     main.guide-wrap { max-width: 880px; margin: 0 auto; padding: 24px 16px 40px; }
@@ -85,20 +85,20 @@
 <script src="assets/site.js"></script>
 <main class="guide-wrap">
 
-<!-- ================= VÍDEO ================= -->
+<!-- ================= VIDEO ================= -->
 <section class="page video-section">
-  <h2>Veja o jogo em ação</h2>
-  <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/XwUCWeQ5r00?si=ClYhWn1uIsWAXkfs" title="Demonstração de Ninja vs Samurai Mega Blaster Battle Royale" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+  <h2>See the game in action</h2>
+  <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/XwUCWeQ5r00?si=ClYhWn1uIsWAXkfs" title="Ninja vs Samurai Mega Blaster Battle Royale demonstration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 </section>
 
-<!-- ================= CAPA ================= -->
+<!-- ================= COVER ================= -->
 <section class="page cover">
   <div class="display t-top">NINJA VS SAMURAI MEGA</div>
   <div class="display t-main">BLASTER</div>
   <div class="display t-sticker">BATTLE ROYALE</div>
-  <div class="tagline">Um golpe. Uma vida. Zero piedade.</div>
-  <div class="display guide">Guia de Como Jogar</div>
-  <div class="mp-badge">Multiplayer: chame a galera! Quanto mais gente, melhor.</div>
+  <div class="tagline">One hit. One life. No mercy.</div>
+  <div class="display guide">How to Play Guide</div>
+  <div class="mp-badge">Multiplayer: bring your friends! The more, the merrier.</div>
   <div class="studio">
     <svg width="120" height="120" viewBox="0 0 100 100" stroke="#3A2A1F" stroke-linejoin="round" stroke-linecap="round">
       <polygon points="43,84 50,99 57,84" fill="#F5B024" stroke-width="4"/>
@@ -117,146 +117,146 @@
       <polygon points="45.5,43 54.5,43 50,51" fill="#DBBDAD" stroke-width="3"/>
     </svg>
     <div class="display name">Bananie</div>
-    <small>Um jogo da Bananie · Jean de Azevedo Pereira</small>
+     <small>A Bananie game · Jean de Azevedo Pereira</small>
   </div>
 </section>
 
-<!-- ================= REGRA DE OURO + MULTIPLAYER ================= -->
+<!-- ================= GOLDEN RULE + MULTIPLAYER ================= -->
 <section class="page">
-  <h2>A regra de ouro: todo mundo tem 1 de vida</h2>
-  <p>Inspirado no clássico mapa customizado <b>"Ninja vs Samurai"</b>, aqui <b>qualquer golpe mata</b>: um corte, uma shuriken, uma estocada.
-  Ninguém ganha trocando dano. Ganha quem se posiciona melhor, se esconde, lê o adversário e ataca na hora certa.</p>
-  <div class="callout sun big"><span class="display">Pense antes de correr.</span> Na maioria das vezes, quem aparece primeiro é quem morre primeiro.</div>
+  <h2>The golden rule: everyone has 1 life</h2>
+  <p>Inspired by the classic custom map <b>"Ninja vs Samurai"</b>, here <b>any hit kills</b>: a slash, a shuriken, a thrust.
+  Nobody wins by trading damage. The winner is the one who positions better, hides, reads the opponent, and attacks at the right moment.</p>
+  <div class="callout sun big"><span class="display">Think before you run.</span> Most of the time, whoever appears first is the one who dies first.</div>
 
-  <h2 style="margin-top:18px">Este jogo é feito para jogar junto</h2>
-  <p><b>Ninja vs Samurai Mega Blaster é um jogo multiplayer.</b> Dá para treinar sozinho, mas a graça de verdade aparece quando a sala enche.
-  <b>Quanto mais pessoas entram, mais engraçado e mais competitivo fica:</b></p>
+  <h2 style="margin-top:18px">This game is made to be played together</h2>
+  <p><b>Ninja vs Samurai Mega Blaster is a multiplayer game.</b> You can practice alone, but the real fun begins when the room fills up.
+  <b>The more people join, the funnier and more competitive it gets:</b></p>
   <ul>
-    <li><b>Mais caos, mais risada:</b> emboscadas em arbustos, clones enganando todo mundo, três pessoas morrendo no mesmo segundo, alguém disfarçado de pedra no meio da vila…</li>
-    <li><b>Mais estratégia:</b> com times cheios, os ninjas podem se dividir e atacar vários talismãs ao mesmo tempo, e os samurais precisam se organizar para proteger tudo.</li>
-    <li><b>Mais tensão:</b> com 1 de vida, cada jogador a mais é mais uma ameaça escondida na névoa.</li>
-    <li><b>Mais revanche:</b> partidas curtas, e "jogar de novo" sai com um clique.</li>
+     <li><b>More chaos, more laughs:</b> ambushes in bushes, clones fooling everyone, three people dying in the same second, someone disguised as a rock in the middle of the village…</li>
+     <li><b>More strategy:</b> with full teams, ninjas can split up and attack several talismans at once, while samurai must organize to protect everything.</li>
+     <li><b>More tension:</b> with 1 life, every additional player is another threat hidden in the fog.</li>
+     <li><b>More rematches:</b> short matches, and "play again" is just one click away.</li>
   </ul>
 
-  <h3>Dois jeitos de juntar a galera</h3>
+  <h3>Two ways to bring everyone together</h3>
   <table>
-    <tr><th style="width:24%">Como</th><th>O que fazer</th></tr>
-    <tr><td><b>No mesmo sofá</b><br>(Jogar Local)</td><td>Um jogador no teclado e mouse, e <b>até 4 controles</b>: cada controle entra apertando <kbd>A</kbd> ou <kbd>Start</kbd>. Todos dividem a mesma tela, e a câmera se afasta para enquadrar todo mundo.</td></tr>
-    <tr><td><b>Pela internet</b><br>(Steam)</td><td>Hospede uma sala, convide seus amigos da Steam pelo lobby ou procure salas abertas. Cabem <b>até 16 jogadores</b> por partida, com <b>chat de voz por proximidade</b>: só quem está perto escuta.</td></tr>
+    <tr><th style="width:24%">How</th><th>What to do</th></tr>
+    <tr><td><b>On the same couch</b><br>(Local Play)</td><td>One player uses keyboard and mouse, plus <b>up to 4 controllers</b>: each controller joins by pressing <kbd>A</kbd> or <kbd>Start</kbd>. Everyone shares the same screen, and the camera zooms out to frame everyone.</td></tr>
+    <tr><td><b>Over the internet</b><br>(Steam)</td><td>Host a room, invite your Steam friends through the lobby, or look for open rooms. Up to <b>16 players</b> can join each match, with <b>proximity voice chat</b>: only nearby players can hear each other.</td></tr>
   </table>
-  <div class="callout leaf"><span class="display">Ponto ideal: 5 contra 5.</span> As Rodadas por Equipe e o Ninjas vs Samurais foram pensados para times cheios. Mas qualquer número a partir de 2 jogadores já funciona.</div>
+  <div class="callout leaf"><span class="display">The sweet spot: 5 vs. 5.</span> Team Rounds and Ninjas vs Samurais were designed for full teams. But any number starting at 2 players works.</div>
 </section>
 
-<!-- ================= CONTROLES ================= -->
+<!-- ================= CONTROLS ================= -->
 <section class="page">
-  <h2>Controles</h2>
+  <h2>Controls</h2>
   <table>
-    <tr><th style="width:34%">Ação</th><th>Teclado e mouse</th><th>Controle</th></tr>
-    <tr><td>Andar</td><td><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> ou setas</td><td>Analógico esquerdo / direcional</td></tr>
-    <tr><td>Mirar</td><td>Mouse</td><td>Analógico direito</td></tr>
-    <tr><td>Golpe de espada</td><td>Botão esquerdo ou <kbd>J</kbd></td><td><kbd>RT</kbd> ou <kbd>X</kbd></td></tr>
-    <tr><td>Shuriken</td><td>Botão direito ou <kbd>K</kbd></td><td><kbd>RB</kbd> ou <kbd>Y</kbd></td></tr>
-    <tr><td>Dash (esquiva)</td><td><kbd>Espaço</kbd> ou <kbd>Shift</kbd></td><td><kbd>A</kbd> ou <kbd>LB</kbd></td></tr>
-    <tr><td>Habilidade da classe</td><td><kbd>Q</kbd> ou <kbd>L</kbd></td><td><kbd>LT</kbd></td></tr>
-    <tr><td>Habilidade extra</td><td><kbd>E</kbd> ou <kbd>;</kbd></td><td><kbd>B</kbd></td></tr>
-    <tr><td>Falar no chat de voz (Steam)</td><td>Segure <kbd>V</kbd> (ou deixe o microfone sempre ligado nas Configurações)</td><td>—</td></tr>
-    <tr><td>Pausar</td><td><kbd>Esc</kbd></td><td><kbd>Start</kbd></td></tr>
-    <tr><td>Trocar quem assistir (morto)</td><td><kbd>A</kbd> / <kbd>D</kbd> ou setas</td><td>Direcional ou <kbd>LB</kbd> / <kbd>RB</kbd></td></tr>
+    <tr><th style="width:34%">Action</th><th>Keyboard and mouse</th><th>Controller</th></tr>
+    <tr><td>Move</td><td><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or arrow keys</td><td>Left stick / D-pad</td></tr>
+    <tr><td>Aim</td><td>Mouse</td><td>Right stick</td></tr>
+    <tr><td>Sword strike</td><td>Left button or <kbd>J</kbd></td><td><kbd>RT</kbd> or <kbd>X</kbd></td></tr>
+    <tr><td>Shuriken</td><td>Right button or <kbd>K</kbd></td><td><kbd>RB</kbd> or <kbd>Y</kbd></td></tr>
+    <tr><td>Dash (dodge)</td><td><kbd>Space</kbd> or <kbd>Shift</kbd></td><td><kbd>A</kbd> or <kbd>LB</kbd></td></tr>
+    <tr><td>Class ability</td><td><kbd>Q</kbd> or <kbd>L</kbd></td><td><kbd>LT</kbd></td></tr>
+    <tr><td>Extra ability</td><td><kbd>E</kbd> or <kbd>;</kbd></td><td><kbd>B</kbd></td></tr>
+    <tr><td>Talk in voice chat (Steam)</td><td>Hold <kbd>V</kbd> (or leave the microphone always on in Settings)</td><td>—</td></tr>
+    <tr><td>Pause</td><td><kbd>Esc</kbd></td><td><kbd>Start</kbd></td></tr>
+    <tr><td>Switch spectator target (dead)</td><td><kbd>A</kbd> / <kbd>D</kbd> or arrow keys</td><td>D-pad or <kbd>LB</kbd> / <kbd>RB</kbd></td></tr>
   </table>
 
-  <h3>O kit básico de todo mundo</h3>
+  <h3>Everyone's basic kit</h3>
   <ul>
-    <li><b>Golpe:</b> um corte em arco na frente, muito rápido. Não atravessa paredes. Aperte de novo logo em seguida para um <b>combo de até 3 golpes</b>.</li>
-    <li><b>Shuriken:</b> 3 cargas, recarrega uma a cada ~2 s. Mata com um acerto e fica cravada em paredes e caixas. (Os samurais atiram flechas com o arco, que funcionam do mesmo jeito.)</li>
-    <li><b>Dash:</b> um pulo curto em que <b>você não pode ser atingido</b>. Use para desviar de shurikens e golpes.</li>
+    <li><b>Strike:</b> a very fast arcing slash in front of you. It does not pass through walls. Press again right afterward for a <b>combo of up to 3 strikes</b>.</li>
+    <li><b>Shuriken:</b> 3 charges, recharging one every ~2 s. A hit kills and the shuriken sticks into walls and crates. (Samurai shoot arrows with their bow, which work the same way.)</li>
+    <li><b>Dash:</b> a short leap during which <b>you cannot be hit</b>. Use it to dodge shurikens and strikes.</li>
   </ul>
-  <div class="callout sun"><span class="display">Ataque pelas costas!</span> Um golpe por trás alcança um pouco mais longe e atravessa até a guarda do samurai. Quem fica de costas para o inimigo não dura muito.</div>
+  <div class="callout sun"><span class="display">Attack from behind!</span> A strike from behind reaches a little farther and even gets through a samurai's guard. Anyone who turns their back to the enemy will not last long.</div>
 
-  <h3>Morreu? Não acabou</h3>
-  <p>Dependendo do modo, você volta depois de alguns segundos, e com uma breve proteção piscando. Enquanto espera, a câmera acompanha um aliado vivo.
-  Aproveite para trocar a habilidade extra: entre uma vida e outra, aperte o botão da habilidade extra para escolher a próxima.</p>
+  <h3>Dead? It's not over</h3>
+  <p>Depending on the mode, you return after a few seconds with a brief flashing protection. While waiting, the camera follows a living ally.
+  Use the time to change your extra ability: between lives, press the extra ability button to choose the next one.</p>
 </section>
 
-<!-- ================= CLASSES E HABILIDADES ================= -->
+<!-- ================= CLASSES AND ABILITIES ================= -->
 <section class="page">
-  <h2>Ninjas e Samurais</h2>
+  <h2>Ninjas and Samurais</h2>
   <div class="cols">
-    <div class="callout"><span class="display">Ninja</span><br>Furtivo e esperto. <b>Some dentro de arbustos e fumaça.</b><br>
-      Habilidade de classe: <b>Disfarce</b>, que vira o objeto mais próximo no chão (uma pedra, uma caixa…) por até 3 segundos, com contagem na tela. Andar ou fazer qualquer ação desfaz o disfarce.</div>
-    <div class="callout"><span class="display">Samurai</span><br>Forte e direto. Não se esconde em arbustos, mas <b>o golpe alcança mais longe e rebate shurikens</b>.<br>
-      Habilidade de classe: <b>Estocada</b>, que avança 6 m com a lança e mata todo inimigo no caminho.</div>
+     <div class="callout"><span class="display">Ninja</span><br>Stealthy and clever. <b>Disappears inside bushes and smoke.</b><br>
+       Class ability: <b>Disguise</b>, which turns you into the nearest object on the ground (a rock, a crate…) for up to 3 seconds, with an on-screen countdown. Moving or taking any action breaks the disguise.</div>
+     <div class="callout"><span class="display">Samurai</span><br>Strong and direct. Cannot hide in bushes, but <b>the strike reaches farther and deflects shurikens</b>.<br>
+       Class ability: <b>Thrust</b>, which advances 6 m with the spear and kills every enemy in its path.</div>
   </div>
 
-  <h3>Habilidades extras (escolha 1 por vida)</h3>
+  <h3>Extra abilities (choose 1 per life)</h3>
   <table>
-    <tr><th style="width:24%">Habilidade</th><th style="width:13%">Quem usa</th><th>O que faz</th></tr>
-    <tr><td>Bomba de Fumaça</td><td><span class="tag n">Ninja</span></td><td>Nuvem de fumaça que funciona como um arbusto por 5 s.</td></tr>
-    <tr><td>Clone</td><td><span class="tag n">Ninja</span></td><td>Uma cópia sua sai correndo na direção da mira por 2 s. Ótima para enganar.</td></tr>
-    <tr><td>Metsubushi</td><td><span class="tag n">Ninja</span></td><td>Pó cegante em cone: os inimigos atingidos enxergam só 30% por 3,5 s.</td></tr>
-    <tr><td>Passos silenciosos</td><td><span class="tag n">Ninja</span></td><td>Passiva: andar dentro de arbustos não balança as folhas.</td></tr>
-    <tr><td>Kiai</td><td><span class="tag s">Samurai</span></td><td>Grito e giro de lança em volta de si: mata quem estiver a até 2,8 m.</td></tr>
-    <tr><td>Naruko</td><td><span class="tag s">Samurai</span></td><td>Corda de sinos: o primeiro inimigo que cruzar toca o alarme e fica visível para o seu time por 4 s.</td></tr>
-    <tr><td>Kamae</td><td><span class="tag s">Samurai</span></td><td>Guarda rápida que bloqueia tudo que vem pela frente. Pelas costas, ainda morre.</td></tr>
-    <tr><td>Taiko</td><td><span class="tag s">Samurai</span></td><td>Tambor de guerra: você e os aliados próximos ficam 35% mais rápidos por 4 s.</td></tr>
-    <tr><td>Aljava</td><td><span class="tag b">Ambos</span></td><td>Passiva: +1 shuriken e recarga mais rápida.</td></tr>
-    <tr><td>Muro de bambu</td><td><span class="tag b">Ambos</span></td><td>Ergue um muro por 5 s que bloqueia passagem, shurikens e golpes (mas não a visão).</td></tr>
-    <tr><td>Pés ligeiros</td><td><span class="tag b">Ambos</span></td><td>Passiva: o dash recarrega 40% mais rápido.</td></tr>
+    <tr><th style="width:24%">Ability</th><th style="width:13%">Who uses it</th><th>What it does</th></tr>
+    <tr><td>Smoke Bomb</td><td><span class="tag n">Ninja</span></td><td>A cloud of smoke that works like a bush for 5 s.</td></tr>
+    <tr><td>Clone</td><td><span class="tag n">Ninja</span></td><td>A copy of you runs in the direction you are aiming for 2 s. Great for fooling enemies.</td></tr>
+    <tr><td>Metsubushi</td><td><span class="tag n">Ninja</span></td><td>Blinding powder in a cone: affected enemies see only 30% for 3.5 s.</td></tr>
+    <tr><td>Silent Steps</td><td><span class="tag n">Ninja</span></td><td>Passive: moving inside bushes does not shake the leaves.</td></tr>
+    <tr><td>Kiai</td><td><span class="tag s">Samurai</span></td><td>A shout and spear spin around you: kills anyone within 2.8 m.</td></tr>
+    <tr><td>Naruko</td><td><span class="tag s">Samurai</span></td><td>Bell rope: the first enemy to cross it triggers the alarm and becomes visible to your team for 4 s.</td></tr>
+    <tr><td>Kamae</td><td><span class="tag s">Samurai</span></td><td>A quick guard that blocks everything from the front. You can still die from behind.</td></tr>
+    <tr><td>Taiko</td><td><span class="tag s">Samurai</span></td><td>War drum: you and nearby allies become 35% faster for 4 s.</td></tr>
+    <tr><td>Quiver</td><td><span class="tag b">Both</span></td><td>Passive: +1 shuriken and faster recharge.</td></tr>
+    <tr><td>Bamboo Wall</td><td><span class="tag b">Both</span></td><td>Raises a wall for 5 s that blocks passage, shurikens, and strikes (but not vision).</td></tr>
+    <tr><td>Fleet Feet</td><td><span class="tag b">Both</span></td><td>Passive: dash recharges 40% faster.</td></tr>
   </table>
-  <p>Algumas habilidades combinam muito bem em equipe: um Taiko na hora certa, um Naruko cobrindo a passagem de um aliado, uma Fumaça para o time inteiro fugir. <b>Mais jogadores, mais combos.</b></p>
+  <p>Some abilities work especially well as a team: a well-timed Taiko, a Naruko covering an ally's path, a Smoke Bomb helping the whole team escape. <b>More players, more combos.</b></p>
 </section>
 
-<!-- ================= MODOS ================= -->
+<!-- ================= MODES ================= -->
 <section class="page">
-  <h2>Modos de jogo</h2>
+  <h2>Game modes</h2>
 
-  <h3>Rodadas por Equipe (clássico)</h3>
-  <p>Ninjas contra samurais, e ninguém renasce durante a rodada. Elimine o time inimigo inteiro para marcar um ponto. Quem chegar primeiro na meta (5 pontos por padrão) é campeão.</p>
+  <h3>Team Rounds (classic)</h3>
+  <p>Ninjas versus samurai, and nobody respawns during the round. Eliminate the entire enemy team to score a point. The first team to reach the goal (5 points by default) wins.</p>
 
-  <h3>Ninjas vs Samurais (roubo de talismãs)</h3>
-  <p>Os <b>ninjas</b> invadem e roubam <b>talismãs</b> espalhados pelo mapa, um de cada vez, e levam até a base ninja. Os <b>samurais</b> defendem.</p>
+  <h3>Ninjas vs Samurais (talismans heist)</h3>
+  <p>The <b>ninjas</b> invade and steal <b>talismans</b> scattered across the map, one at a time, and carry them to the ninja base. The <b>samurai</b> defend.</p>
   <ul>
-    <li>Os ninjas dividem um estoque de <b>vidas</b> (10 por padrão). Quando acaba, quem morrer fica fora.</li>
-    <li>Quem carrega o talismã anda mais devagar e brilha de tempos em tempos, então os samurais podem achá-lo.</li>
-    <li>Talismã caído: um samurai que encosta nele o devolve ao santuário; um ninja que encosta pega de volta.</li>
-    <li><b>Ninjas vencem</b> entregando a meta de talismãs (5 de 7 por padrão). <b>Samurais vencem</b> acabando com as vidas dos ninjas.</li>
+    <li>The ninjas share a pool of <b>lives</b> (10 by default). When it runs out, anyone who dies is out.</li>
+    <li>The talisman carrier moves more slowly and glows from time to time, allowing the samurai to find them.</li>
+    <li>Dropped talisman: a samurai who touches it returns it to the shrine; a ninja who touches it picks it up again.</li>
+    <li><b>Ninjas win</b> by delivering the target number of talismans (5 of 7 by default). <b>Samurai win</b> by depleting the ninjas' lives.</li>
   </ul>
 
-  <h3>Roubo de Estandarte (captura da bandeira)</h3>
-  <p>Dois clãs, o <b>Clã do Dragão</b> e o <b>Clã da Fênix</b>, cada um com ninjas e samurais misturados. Roube o estandarte inimigo e leve até o seu pedestal
-  <b>enquanto o seu está seguro em casa</b>. O portador anda mais devagar e um sino o denuncia de tempos em tempos. Vence quem fizer 3 capturas, ou quem estiver na frente quando os 10 minutos acabarem
-  (empate vai para a morte súbita).</p>
+  <h3>Banner Heist (capture the flag)</h3>
+  <p>Two clans, the <b>Dragon Clan</b> and the <b>Phoenix Clan</b>, each with mixed ninjas and samurai. Steal the enemy banner and take it to your pedestal
+  <b>while yours is safe at home</b>. The carrier moves more slowly and a bell gives them away from time to time. The first to make 3 captures wins, or the team in the lead when 10 minutes run out
+  (a tie goes to sudden death).</p>
 
   <h3>Battle Royale</h3>
-  <p>Cada um por si. Escolha ninja ou samurai, sem renascer e sem visão compartilhada. Uma <b>zona</b> vai se fechando: ficar 3 segundos fora dela é morte. <b>O último de pé vence.</b></p>
-  <div class="callout leaf"><span class="display">Battle Royale com a sala cheia é outra coisa.</span> Com 2 pessoas é um duelo; com 10 ou mais, é uma bagunça deliciosa de emboscadas, traições e fugas desesperadas da zona.</div>
+  <p>Every player for themselves. Choose ninja or samurai, with no respawns and no shared vision. A <b>zone</b> closes in: staying outside it for 3 seconds means death. <b>The last one standing wins.</b></p>
+  <div class="callout leaf"><span class="display">A full-room Battle Royale is something else.</span> With 2 people it is a duel; with 10 or more, it is a delightful mess of ambushes, betrayals, and desperate escapes from the zone.</div>
 </section>
 
-<!-- ================= MAPAS + DICAS ================= -->
+<!-- ================= MAPS + TIPS ================= -->
 <section class="page">
-  <h2>Mapas</h2>
+  <h2>Maps</h2>
   <table>
-    <tr><th style="width:26%">Mapa</th><th>Como é</th><th style="width:28%">Modos</th></tr>
-    <tr><td>Vila da Floresta</td><td>Uma vila murada no meio de uma floresta fechada, com trilhas, clareiras, lanternas de pedra e lagoas que deixam você mais lento.</td><td>Rodadas, Ninjas vs Samurais</td></tr>
-    <tr><td>Clareira de Outono</td><td>Clareira central cercada de trilhas em anel, lama e atalhos estreitos.</td><td>Rodadas, Ninjas vs Samurais</td></tr>
-    <tr><td>Mata Fechada de Outono</td><td>Grande, claustrofóbico: um labirinto de trilhas estreitas e esconderijos.</td><td>Rodadas, Ninjas vs Samurais, Battle Royale</td></tr>
-    <tr><td>Vilas Rivais</td><td>Duas vilas frente a frente, com três caminhos entre elas.</td><td>Rodadas, Roubo de Estandarte</td></tr>
-    <tr><td>Colinas das Cerejeiras</td><td>Mapa enorme com relevo: platôs rosados, rampas, rio, lago, pagodes e cerejeiras.</td><td>Battle Royale</td></tr>
+    <tr><th style="width:26%">Map</th><th>What it is like</th><th style="width:28%">Modes</th></tr>
+    <tr><td>Forest Village</td><td>A walled village in the middle of a dense forest, with paths, clearings, stone lanterns, and ponds that slow you down.</td><td>Team Rounds, Ninjas vs Samurais</td></tr>
+    <tr><td>Autumn Clearing</td><td>A central clearing surrounded by ring paths, mud, and narrow shortcuts.</td><td>Team Rounds, Ninjas vs Samurais</td></tr>
+    <tr><td>Dense Autumn Forest</td><td>Large and claustrophobic: a maze of narrow paths and hiding spots.</td><td>Team Rounds, Ninjas vs Samurais, Battle Royale</td></tr>
+    <tr><td>Rival Villages</td><td>Two villages facing each other, with three paths between them.</td><td>Team Rounds, Banner Heist</td></tr>
+    <tr><td>Cherry Blossom Hills</td><td>Huge terrain map: pink plateaus, ramps, a river, a lake, pagodas, and cherry trees.</td><td>Battle Royale</td></tr>
   </table>
 
-  <h2 style="margin-top:14px">Dicas para sobreviver</h2>
+  <h2 style="margin-top:14px">Tips for survival</h2>
   <ul>
-    <li><b>A névoa é sua amiga (e sua inimiga).</b> Você só vê o que está perto e o que seu time vê. Paredes e árvores bloqueiam a visão.</li>
-    <li><b>Arbustos escondem ninjas</b>, mas balançam quando alguém entra, sai ou anda dentro. Fique de olho nas folhas.</li>
-    <li><b>Atacar revela</b> um ninja escondido por um instante. Escolha bem a hora.</li>
-    <li><b>Terreno alto esconde</b> quem está em cima de quem está embaixo. Mas os ataques passam: dá para acertar de baixo para cima.</li>
-    <li><b>Lama deixa você lento</b>, inclusive no dash. Evite lutar dentro dela.</li>
-    <li><b>Samurai: rebata shurikens</b> com o golpe e devolva para quem jogou.</li>
-    <li><b>Ninja: não lute de frente.</b> Disfarce-se, espere, e ataque pelas costas.</li>
+    <li><b>The fog is your friend (and your enemy).</b> You only see what is nearby and what your team sees. Walls and trees block vision.</li>
+    <li><b>Bushes hide ninjas</b>, but they shake when someone enters, exits, or moves inside. Watch the leaves.</li>
+    <li><b>Attacking reveals</b> a hidden ninja for a moment. Choose your timing carefully.</li>
+    <li><b>High ground hides</b> players above from those below. But attacks pass through: you can hit upward.</li>
+    <li><b>Mud slows you down</b>, including during a dash. Avoid fighting in it.</li>
+    <li><b>Samurai: deflect shurikens</b> with your strike and send them back to whoever threw them.</li>
+    <li><b>Ninja: do not fight head-on.</b> Disguise yourself, wait, and attack from behind.</li>
   </ul>
 
   <div class="callout sun big" style="margin-top:16px; text-align:center">
-    <span class="display" style="font-size:20pt">Agora chame os amigos!</span><br>
-    Hospede uma partida, mande o convite e encha a sala. Quanto mais gente, mais engraçado e mais competitivo fica.
+     <span class="display" style="font-size:20pt">Now call your friends!</span><br>
+     Host a match, send the invite, and fill the room. The more people, the funnier and more competitive it gets.
   </div>
   <div class="footer-note">Ninja vs Samurai Mega Blaster Battle Royale · © 2026 Bananie</div>
 </section>
